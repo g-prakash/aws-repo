@@ -1,4 +1,10 @@
 from fastapi import FastAPI
-from fastapi_health import health
+from typing import Optional
+#from fastapi_health import health
+
+print("Hello World check")
 app = FastAPI()
-print("Hello World")
+@app.get("/")
+def read_root():
+    return {"Hellow": "World"}
+
